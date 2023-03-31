@@ -1,0 +1,5 @@
+@use '../utils/variables';
+
+.text {
+  font-family: variables.$normal;
+}

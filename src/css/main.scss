@@ -1,0 +1,15 @@
+// Utils
+@use '../css/utils/reset';
+@use '../css/utils/variables';
+@use '../css/utils/fonts';
+@use '../css/utils/helpers';
+
+// Components
+@use './components/titles';
+@use './components/regularText';
+
+
+// Blocks
+@use './blocks/header';
+@use './blocks/mainContent';
+

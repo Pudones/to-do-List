@@ -1,0 +1,60 @@
+@use './variables';
+// Sizes Sheet
+// Font: 16,20,21,24,26,31,36,44,57
+
+// Letter Spacing
+.ls2 {
+  letter-spacing: 2px;
+}
+
+// Texto
+.textCenter {
+  text-align: center;
+}
+.white {
+  color: variables.$white;
+}
+.black {
+  color: variables.$black;
+}
+
+// Paddings
+
+// Font Weight
+.fw3 {
+  font-weight: 300;
+}
+.fw4 {
+  font-weight: 400;
+}
+
+
+
+// Each
+
+$size5: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50;
+
+@each $size in $size5 {
+  .pad#{$size} {
+    padding: #{$size}px;
+  }
+}
+
+@each $size in $size5 {
+  .mb#{$size} {
+    margin-bottom: #{$size}px;
+  }
+}
+
+
+@each $fs, $value in variables.$font-size {
+  .#{$fs} {
+    font-size: $value;
+  }
+
+  // @include mixins.forLargeScreen {
+  //   .#{$fs}-d {
+  //     font-size: $value;
+  //   }
+  // }
+}

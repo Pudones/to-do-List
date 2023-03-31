@@ -1,0 +1,33 @@
+
+// Cores
+$dark: #2D2727;
+$lightDark: #413543;
+$purple: #8F43EE;
+$white: #f7f2f2ee;
+$black: #121212;
+
+// Fontes
+$display: 'Handrawn', display;
+$normal: 'Poppins', sans-serif;
+
+$font-16: 1.6rem;
+$font-20: 2.0rem;
+$font-21: 2.1rem;
+$font-24: 2.4rem;
+$font-26: 2.6rem;
+$font-31: 3.1rem;
+$font-36: 3.6rem;
+$font-44: 4.4rem;
+$font-57: 5.7rem;
+
+$font-size: (
+  "fs16": $font-16,
+  "fs20": $font-20,
+  "fs21": $font-21,
+  "fs24": $font-24,
+  "fs26": $font-26,
+  "fs31": $font-31,
+  "fs36": $font-36,
+  "fs44": $font-44,
+  "fs57": $font-57
+);

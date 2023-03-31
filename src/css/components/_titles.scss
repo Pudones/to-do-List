@@ -1,0 +1,5 @@
+@use '../utils/variables';
+
+.title {
+  font-family: variables.$display;
+}

@@ -1,0 +1,22 @@
+@use '../utils/variables';
+
+main {
+  border-radius: 10px;
+  background-color: variables.$white;
+
+  .input-task {
+    width: 100%;
+    height: 30px;
+    outline: none;
+
+    &:focus {
+      outline: 1px solid navy;
+    }
+  }
+  .input-send {
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    height: 30px;
+  }
+}
