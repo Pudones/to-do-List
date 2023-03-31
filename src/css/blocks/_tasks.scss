@@ -1,0 +1,9 @@
+@use '../utils/variables';
+
+.tasks-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: variables.$white;
+
+}

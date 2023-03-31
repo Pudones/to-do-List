@@ -7,17 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Do List</title>
   <link rel="stylesheet" href="./src/css/main.css">
+  <script defer src="./src/js/script.js"></script>
 </head>
 
 <body class="pad10">
   <h1 class="title white mb10 textCenter ls2 fs44 fw4">To Do List</h1>
-  <main class="pad10">
+  <button class="button-delete pad5">Delete</button>
+  <main class="pad10 mb40">
     <p class="text textCenter">Welcome to the To Do List App!</p>
     <p class="text textCenter mb15">Input your task on the field below:</p>
     <input class="input-task textCenter fs24 mb15" type="text" name="task" id="task" autocomplete="off" spellcheck="false">
     <input class="input-send" type="submit" value="Create Task">
-
   </main>
+
+  <div class="tasks">
+    <!-- <div class="tasks-wrapper mb15 pad10">
+      <p class="text">Buy some groceries.</p>
+    </div> -->
+  </div>
+
 </body>
 
 </html>

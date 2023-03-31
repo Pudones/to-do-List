@@ -7,9 +7,11 @@
 // Components
 @use './components/titles';
 @use './components/regularText';
+@use './components/buttons';
 
 
 // Blocks
 @use './blocks/header';
 @use './blocks/mainContent';
+@use './blocks/tasks';
 
