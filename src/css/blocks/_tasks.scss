@@ -2,8 +2,35 @@
 
 .tasks-wrapper {
   display: flex;
-  justify-content: space-between;
-  border-radius: 10px;
+  align-items: center;
   background-color: variables.$white;
+  margin-bottom: 3px;
+  overflow: hidden;
 
+  .tasks-check {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+
+    .tasks-radio {
+      appearance: none;
+      position: absolute;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:checked {
+        background: white;
+      }
+    }
+
+  }
 }

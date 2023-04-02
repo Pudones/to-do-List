@@ -7,12 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Do List</title>
   <link rel="stylesheet" href="./src/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script defer src="./src/js/script.js"></script>
 </head>
 
 <body class="pad10">
+  
   <h1 class="title white mb10 textCenter ls2 fs44 fw4">To Do List</h1>
-  <button class="button-delete pad5">Delete</button>
+
+  <i class="button-delete fa-solid fa-trash fa-xl" style="color: #ffffff;"></i>
+
   <main class="pad10 mb40">
     <p class="text textCenter">Welcome to the To Do List App!</p>
     <p class="text textCenter mb15">Input your task on the field below:</p>
@@ -20,11 +24,7 @@
     <input class="input-send" type="submit" value="Create Task">
   </main>
 
-  <div class="tasks">
-    <!-- <div class="tasks-wrapper mb15 pad10">
-      <p class="text">Buy some groceries.</p>
-    </div> -->
-  </div>
+  <div class="tasks"></div>
 
 </body>
 
