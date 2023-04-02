@@ -1,15 +1,16 @@
 @use '../utils/variables';
+@use '../utils/mixins';
 
 .tasks-wrapper {
-  display: flex;
-  align-items: center;
   background-color: variables.$white;
-  margin-bottom: 3px;
+  margin: 0 auto 3px auto;
   overflow: hidden;
+  max-width: 500px;
+
 
   .tasks-check {
     position: relative;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     background: black;
@@ -32,5 +33,9 @@
       }
     }
 
+  }
+
+  .tasks-text {
+    display: inline;
   }
 }

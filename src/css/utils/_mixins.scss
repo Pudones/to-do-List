@@ -1,0 +1,7 @@
+@use '../utils/variables';
+
+@mixin forLargeScreen {
+  @media (min-width: variables.$largeScreen) {
+    @content
+  }
+};

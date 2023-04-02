@@ -3,6 +3,9 @@
 // Font: 16,20,21,24,26,31,36,44,57
 
 // Letter Spacing
+.lsHalf {
+  letter-spacing: .5px;
+}
 .ls2 {
   letter-spacing: 2px;
 }
@@ -16,6 +19,9 @@
 }
 .black {
   color: variables.$black;
+}
+.bold {
+  font-weight: 700;
 }
 
 // Paddings
