@@ -41,8 +41,20 @@ $size5: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50;
 }
 
 @each $size in $size5 {
+  .mg#{$size} {
+    margin: #{$size}px;
+  }
+}
+
+@each $size in $size5 {
   .mb#{$size} {
     margin-bottom: #{$size}px;
+  }
+}
+
+@each $size in $size5 {
+  .mr#{$size} {
+    margin-right: #{$size}px;
   }
 }
 
