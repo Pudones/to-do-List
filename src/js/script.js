@@ -8,7 +8,11 @@
   // EventListener that listen to a click on a target, if the target is a checkbox, it passes, otherwise, return. If it is a checkbox, on click, the checkbox goes to 'checked' state and a checked class is toggled.
   document.addEventListener('click', e => {
     if (e.target.type != 'checkbox') return;
-    let parent = e.target.closest('.tasks-wrapper');
+
+    const parent = e.target.closest('.tasks-wrapper');
+    const targetText = parent.children[1];
+
+    targetText.classList.toggle('line-through');
     parent.classList.toggle('checked');
   })
 

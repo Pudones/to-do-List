@@ -7,22 +7,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Do List</title>
   <link rel="stylesheet" href="./src/css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script defer src="./src/js/script.js"></script>
   <link rel="shortcut icon" href="./src/assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body class="pad10">
-  
+
   <h1 class="title white mb10 textCenter ls2 fs44 fw4">To Do List</h1>
 
   <i class="button-delete fa-solid fa-trash fa-xl" style="color: #ffffff;"></i>
 
   <main class="pad10 mb40">
-    <p class="text textCenter bold lsHalf fs24">Welcome to the <br> To Do List App!</p>
+    <p class="text textCenter bold lsHalf fs24 mb15">Welcome to the <br> To Do List App!</p>
     <p class="text textCenter mb15 fs20">Input your task on the field below:</p>
-    <input class="input-task textCenter fs24 mb15" type="text" name="task" id="task" autocomplete="off" spellcheck="false">
-    <input class="input-send" type="submit" value="Create Task">
+    <div class="input-fields">
+      <input class="input-task textCenter fs24 mb15" type="text" name="task" id="task" autocomplete="off"
+        spellcheck="false">
+      <input class="input-send bold" type="submit" value="Create Task">
+    </div>
   </main>
 
   <div class="tasks"></div>

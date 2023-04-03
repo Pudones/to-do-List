@@ -2,7 +2,7 @@
 @use '../utils/mixins';
 
 main {
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: variables.$white;
 
   @include mixins.forLargeScreen {
@@ -10,19 +10,21 @@ main {
     margin: 0 auto;
   }
 
-  .input-task {
-    width: 100%;
-    height: 40px;
-    outline: none;
+  .input-fields {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 
-    &:focus {
-      outline: 2px solid navy;
+    .input-task {
+      width: 70%;
+      height: 50px;
+      outline: none;
+      border-radius: 5px;
+  
+      &:focus {
+        outline: 2px solid navy;
+      }
     }
   }
-  .input-send {
-    display: block;
-    margin: 0 auto;
-    padding: 5px;
-    height: 30px;
-  }
+
 }
