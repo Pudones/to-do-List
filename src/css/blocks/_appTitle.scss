@@ -1,6 +1,7 @@
 @use '../utils/variables';
 
 .app-title {
+  height: 60px;
   max-width: variables.$largeScreen;
   margin: 0 auto;
   position: relative;

@@ -2,7 +2,7 @@
 @use '../utils/mixins';
 
 main {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
 
   .task-creation {
     border-radius: 5px;
