@@ -3,8 +3,15 @@
 // Trash Can to delete tasks
 .button-delete {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 25px;
+  left: 0;
+  cursor: pointer;
+}
+
+.button-help {
+  position: absolute;
+  top: 25px;
+  right: 0;
   cursor: pointer;
 }
 

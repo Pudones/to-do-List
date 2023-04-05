@@ -2,10 +2,18 @@
 // Sizes Sheet
 // Font: 16,20,21,24,26,31,36,44,57
 
+// Other Stuff
+
+.blur {
+  filter: blur(15px);
+}
+
+
 // Letter Spacing
 .lsHalf {
   letter-spacing: .5px;
 }
+
 .ls2 {
   letter-spacing: 2px;
 }
@@ -14,25 +22,29 @@
 .textCenter {
   text-align: center;
 }
+
 .white {
   color: variables.$white;
 }
+
 .black {
   color: variables.$black;
 }
+
 .bold {
   font-weight: 700;
 }
+
 .line-through {
   text-decoration: line-through;
 }
 
-// Paddings
 
 // Font Weight
 .fw3 {
   font-weight: 300;
 }
+
 .fw4 {
   font-weight: 400;
 }
@@ -56,6 +68,12 @@ $size5: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50;
 }
 
 @each $size in $size5 {
+  .mt#{$size} {
+    margin-top: #{$size}px;
+  }
+}
+
+@each $size in $size5 {
   .mb#{$size} {
     margin-bottom: #{$size}px;
   }
@@ -68,7 +86,8 @@ $size5: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50;
 }
 
 
-@each $fs, $value in variables.$font-size {
+@each $fs,
+$value in variables.$font-size {
   .#{$fs} {
     font-size: $value;
   }

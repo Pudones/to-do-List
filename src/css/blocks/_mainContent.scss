@@ -2,29 +2,35 @@
 @use '../utils/mixins';
 
 main {
-  border-radius: 5px;
-  background-color: variables.$white;
+  min-height: 100vh;
 
-  @include mixins.forLargeScreen {
-    max-width: variables.$largeScreen;
-    margin: 0 auto;
-  }
+  .task-creation {
+    border-radius: 5px;
+    background-color: variables.$white;
 
-  .input-fields {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
+    @include mixins.forLargeScreen {
+      max-width: variables.$largeScreen;
+      margin: 0 auto 40px auto;
+    }
 
-    .input-task {
-      width: 70%;
-      height: 50px;
-      outline: none;
-      border-radius: 5px;
+    .input-fields {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
   
-      &:focus {
-        outline: 2px solid navy;
+      .input-task {
+        width: 70%;
+        height: 50px;
+        outline: none;
+        border-radius: 5px;
+    
+        &:focus {
+          outline: 2px solid navy;
+        }
       }
     }
+
   }
+
 
 }
