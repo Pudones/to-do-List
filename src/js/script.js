@@ -45,9 +45,7 @@
     saveTasks();
   }
 
-  clearInput = () => {
-    inputTask.value = '';
-  }
+  clearInput = () => inputTask.value = '';
 
   // Submit task on click
   inputSend.addEventListener('click', () => {
@@ -76,8 +74,8 @@
 
   // Tasks is a 'getElementsByClassName', so, it returns a HTMLCollection that can't be iteracted with a 'forEach' directly like a NodeList, so we use 'Array.from' to transform it in a array.
   deleteBtn.addEventListener('click', () => {
-    Array.from(tasks).forEach(ele => {
-      if (ele.classList.contains('checked')) ele.remove();
+    Array.from(tasks).forEach(el => {
+      if (el.classList.contains('checked')) el.remove();
       saveTasks();
     });
   })
@@ -87,9 +85,7 @@
     const getTasks = document.getElementsByClassName('tasks-wrapper');
     const taskList = [];
 
-    Array.from(getTasks).forEach(ele => {
-      taskList.push(ele.children[1].innerText);
-    })
+    Array.from(getTasks).forEach(el => taskList.push(el.children[1].innerText));
 
     // Only strings on localStorage, that's why the JSON Conversion
     const tasksJSON = JSON.stringify(taskList);
@@ -98,7 +94,7 @@
 
   // IIFE that gets the tasks saved on localStorage if exist.
   (() => {
-    const tasks = localStorage.getItem('tasks')
+    const tasks = localStorage.getItem('tasks');
     const taskList = JSON.parse(tasks);
     for (let task of taskList) {
       createTask(task);

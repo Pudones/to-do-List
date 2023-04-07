@@ -6,23 +6,30 @@
   const helpCloseBtn = document.querySelector('.help-modal-close-btn');
   let isVisible;
 
+  main.classList.add('transition-filter');
+  header.classList.add('transition-filter');
+
   toggleModal = () => {
     if (!isVisible) {
-      helpModal.classList.toggle('modal--visibility');
       main.classList.add('blur');
       header.classList.add('blur');
+      setTimeout(()=> {
+        helpModal.classList.toggle('modal--visibility');
+      }, 500);
       isVisible = true;
       return;
     }
 
     helpModal.classList.toggle('modal--visibility');
-    main.classList.remove('blur');
-    header.classList.remove('blur');
+    setTimeout(() => {
+      main.classList.remove('blur');
+      header.classList.remove('blur');
+    }, 500);
     isVisible = false;
     return;
   }
 
-  helpBtn.addEventListener('click', toggleModal);
-  helpCloseBtn.addEventListener('click', toggleModal);
+  let btnArray = [helpBtn, helpCloseBtn];
+  btnArray.forEach(el => el.addEventListener('click', toggleModal));
 
 })();
