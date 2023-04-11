@@ -5,12 +5,20 @@
   const tasks = document.getElementsByClassName('tasks-wrapper');
   const deleteBtn = document.querySelector('.button-delete');
 
+  // Sound Effects
+  const penSound = new Audio('https://www.myinstants.com/media/sounds/pen-drawing-line.mp3');
+  penSound.volume = 0.4;
+  const trashSound = new Audio('https://www.myinstants.com/media/sounds/windows-xp-recycle-bin.mp3');
+
   // EventListener that listen to a click on a target, if the target is a checkbox, it passes, otherwise, return. If it is a checkbox, on click, the checkbox goes to 'checked' state and a checked class is toggled.
   document.addEventListener('click', e => {
     if (e.target.type != 'checkbox') return;
 
     const parent = e.target.closest('.tasks-wrapper');
     const targetText = parent.children[1];
+
+    // If the target element doesn't contain the 'line-through' class, the sound effect of a pen drawing a line will play.
+    if(!targetText.classList.contains('line-through')) penSound.play();
 
     targetText.classList.toggle('line-through');
     parent.classList.toggle('checked');
@@ -75,6 +83,7 @@
   // Tasks is a 'getElementsByClassName', so, it returns a HTMLCollection that can't be iteracted with a 'forEach' directly like a NodeList, so we use 'Array.from' to transform it in a array.
   deleteBtn.addEventListener('click', () => {
     Array.from(tasks).forEach(el => {
+      trashSound.play();
       if (el.classList.contains('checked')) el.remove();
       saveTasks();
     });

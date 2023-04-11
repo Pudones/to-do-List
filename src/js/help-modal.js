@@ -11,25 +11,34 @@
 
   toggleModal = () => {
     if (!isVisible) {
+      helpBtn.removeEventListener('click', toggleModal);
+      helpBtn.classList.remove('pointer');
+
       main.classList.add('blur');
       header.classList.add('blur');
-      setTimeout(()=> {
+
+      setTimeout(() => {
         helpModal.classList.toggle('modal--visibility');
       }, 500);
+
       isVisible = true;
       return;
     }
 
+    helpBtn.addEventListener('click', toggleModal);
+    helpBtn.classList.add('pointer');
     helpModal.classList.toggle('modal--visibility');
+
     setTimeout(() => {
       main.classList.remove('blur');
       header.classList.remove('blur');
     }, 500);
+
     isVisible = false;
     return;
   }
 
-  let btnArray = [helpBtn, helpCloseBtn];
+  const btnArray = [helpBtn, helpCloseBtn];
   btnArray.forEach(el => el.addEventListener('click', toggleModal));
 
 })();

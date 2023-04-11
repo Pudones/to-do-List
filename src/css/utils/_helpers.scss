@@ -2,13 +2,15 @@
 // Sizes Sheet
 // Font: 16,20,21,24,26,31,36,44,57
 
-// Other Stuff
+// Other
 .transition-filter {
   transition: .5s filter linear;
 }
-
 .blur {
   filter: blur(15px);
+}
+.pointer {
+  cursor: pointer;
 }
 
 
@@ -32,6 +34,10 @@
 
 .black {
   color: variables.$black;
+}
+
+.regular {
+  font-weight: 400;
 }
 
 .bold {
